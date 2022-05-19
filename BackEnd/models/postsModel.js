@@ -14,6 +14,10 @@ const PostsModel = mongoose.model(
         data: {
             type: Date,
             default: Date.now
+        },
+        image: {
+            type: String,
+            required: true
         }
     },
     "posts"

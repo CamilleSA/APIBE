@@ -13,7 +13,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const newRecord = new PostsModel({
         author: req.body.author,
-        message: req.body.message        
+        message: req.body.message,
+        image: req.body.image   
     });
 
     newRecord.save((err, docs) => {
@@ -28,7 +29,8 @@ router.put("/:id", (req, res) => {
     
     const updateRecord = {
         author: req.body.author,
-        message: req.body.message
+        message: req.body.message,
+        image: req.body.image
     };
 
     PostsModel.findByIdAndUpdate(
